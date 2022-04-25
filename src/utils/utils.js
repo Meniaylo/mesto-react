@@ -1,22 +1,4 @@
 
-export const formValidationConfig = {
-  formSelector: '.form',
-  inputSelector: '.form__input',
-  inputErrorClass: 'form__input-error_active',
-  inputIsInvalidClass: 'form__input_type_error',
-  submitBtnSelector: '.form__submit-btn',
-  submitBtnInactiveClass: 'form__submit-btn_inactive'
-};
-
-
-export const userProfileConfig = {
-  nameSelector: '.profile__name',
-  occupationSelector: '.profile__occupation',
-  avatarSelector: '.profile__avatar',
-  avatarWrapperToClick: '.profile__avatar-wrapper'
-}
-
-
 export const apiInfo = {
   baseUrl: 'https://nomoreparties.co/v1/cohort-38',
   headers: {

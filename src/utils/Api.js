@@ -6,7 +6,6 @@ class Api {
     this._headers = apiInfo.headers;
   }
 
-
   _handleServerResponse(res) {
     if (res.ok) {
       return res.json();
@@ -15,14 +14,12 @@ class Api {
     .then(dataObject => dataObject)
   }
 
-
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       headers: this._headers,
     })
     .then(res => this._handleServerResponse(res))
   }
-
 
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
@@ -31,7 +28,6 @@ class Api {
     })
     .then(res => this._handleServerResponse(res))
   }
-
 
   changeAvatar(avatarUrl) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
@@ -44,7 +40,6 @@ class Api {
     .then(res => this._handleServerResponse(res))
   }
 
-
   patchUserInfo(data) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
@@ -55,7 +50,6 @@ class Api {
       })
     })
   }
-
 
   postCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
@@ -77,7 +71,6 @@ class Api {
     .then(res => this._handleServerResponse(res))
   }
 
-
   putLike(cardId) {
   return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
     method: 'PUT',
@@ -86,7 +79,6 @@ class Api {
   .then(res => this._handleServerResponse(res))
   }
 
-  
   deleteLike(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: 'DELETE',

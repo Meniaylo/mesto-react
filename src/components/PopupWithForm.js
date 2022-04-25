@@ -1,4 +1,5 @@
-function PopupWithForm({title, name, children, isOpen, onClose}) {
+function PopupWithForm({title, name, buttonText, isOpen, onClose, children}) {
+  
   return (
     <section
       className={`popup ${isOpen && 'popup_active'}`}
@@ -12,7 +13,7 @@ function PopupWithForm({title, name, children, isOpen, onClose}) {
           onClick={onClose}></button>
         <form className="form" name={`${name}-form`}>
           {children}
-          <button className="form__submit-btn" type="submit">Сохранить</button>
+          <button className="form__submit-btn" type="submit">{buttonText}</button>
         </form>
       </div>
     </section>

@@ -1,16 +1,16 @@
 import React from "react";
+import {useEffect, useState} from 'react';
 import api from "../utils/Api";
 import Card from './Card';
 
-
 function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
 
-  const [userName, setUserName] = React.useState('');
-  const [userDescription, setUserDescription] = React.useState('');
-  const [userAvatar, setUserAvatar] = React.useState('');
-  const [cards, setCards] = React.useState([]);
+  const [userName, setUserName] = useState('');
+  const [userDescription, setUserDescription] = useState('');
+  const [userAvatar, setUserAvatar] = useState('');
+  const [cards, setCards] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     Promise.all([api.getUserInfo(), api.getInitialCards()])
       .then(([data, initialCards]) => {
           setUserName(data.name);
@@ -23,7 +23,6 @@ function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick}) {
         console.log(`Ошибка! ${err}`);
       })
   }, []);
-
 
   return (
     <main className="content">
