@@ -71,21 +71,29 @@ class Api {
     .then(res => this._handleServerResponse(res))
   }
 
-  putLike(cardId) {
-  return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-    method: 'PUT',
-    headers: this._headers
-  })
-  .then(res => this._handleServerResponse(res))
-  }
+  // putLike(cardId) {
+  // return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
+  //   method: 'PUT',
+  //   headers: this._headers
+  // })
+  // .then(res => this._handleServerResponse(res))
+  // }
 
-  deleteLike(cardId) {
+  // deleteLike(cardId) {
+  //   return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
+  //     method: 'DELETE',
+  //     headers: this._headers
+  //   })
+  //   .then(res => this._handleServerResponse(res))
+  // }
+
+  changeLikeCardStatus(cardId, isLiked) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-      method: 'DELETE',
+      method: isLiked ? 'PUT' : 'DELETE',
       headers: this._headers
     })
     .then(res => this._handleServerResponse(res))
-    }
+  }
 }
 
 const api = new Api(apiInfo);
