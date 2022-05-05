@@ -74,45 +74,4 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   );
 }
 
-
-{/* <PopupWithForm
-        title={'Редактировать профиль'}
-        name={'profile-popup'}
-        buttonText={'Сохранить'}
-        isOpen={isEditProfilePopupOpen}
-        onClose={closeAllPopups}>
-          <>
-            <div className="form__wrap">
-              <input
-                className="form__input"
-                id="name-input"
-                type="text"
-                name="inputName"
-                defaultValue="1"
-                placeholder="Ваше имя"
-                minLength="2"
-                maxLength="40"
-                required/>
-              <span className="form__input-error name-input-error"></span>
-            </div>
-            <div className="form__wrap">
-              <input
-                className="form__input"
-                id="occupation-input"
-                type="text"
-                name="inputOccupation"
-                defaultValue="2"
-                placeholder="Род занятий"
-                minLength="2"
-                maxLength="200"
-                required/>
-              <span className="form__input-error occupation-input-error"></span>
-            </div>
-          </>
-          </PopupWithForm> */}
-
-
-    
-
-
 export default EditProfilePopup;

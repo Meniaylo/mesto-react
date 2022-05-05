@@ -43,8 +43,8 @@ class Api {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify({
-        name: data.inputElementTitle,
-        link: data.inputElementLink,
+        name: data.title,
+        link: data.cardLink,
       }),
     }).then((res) => this._handleServerResponse(res));
   }
