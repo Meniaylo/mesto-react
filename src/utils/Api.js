@@ -38,17 +38,6 @@ class Api {
     }).then((res) => this._handleServerResponse(res));
   }
 
-  // patchUserInfo(data) {
-  //   return fetch(`${this._baseUrl}/users/me`, {
-  //     method: "PATCH",
-  //     headers: this._headers,
-  //     body: JSON.stringify({
-  //       name: data.inputName,
-  //       about: data.inputOccupation,
-  //     }),
-  //   });
-  // }
-
   postCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
@@ -66,22 +55,6 @@ class Api {
       headers: this._headers,
     }).then((res) => this._handleServerResponse(res));
   }
-
-  // putLike(cardId) {
-  // return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-  //   method: 'PUT',
-  //   headers: this._headers
-  // })
-  // .then(res => this._handleServerResponse(res))
-  // }
-
-  // deleteLike(cardId) {
-  //   return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-  //     method: 'DELETE',
-  //     headers: this._headers
-  //   })
-  //   .then(res => this._handleServerResponse(res))
-  // }
 
   setUserInfo({ name, about }) {
     return fetch(`${this._baseUrl}/users/me`, {

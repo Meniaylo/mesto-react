@@ -5,6 +5,7 @@
     margin-right: 30px;
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
   }
   
   .profile__avatar-wrapper::after {
