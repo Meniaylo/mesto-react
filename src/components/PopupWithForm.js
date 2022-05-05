@@ -1,4 +1,4 @@
-function PopupWithForm({title, name, buttonText, isOpen, onClose, children}) {
+function PopupWithForm({title, name, buttonText, isOpen, onClose, onSubmit, children}) {
   
   return (
     <section
@@ -10,8 +10,13 @@ function PopupWithForm({title, name, buttonText, isOpen, onClose, children}) {
           className="popup__exit-btn link"
           type="button"
           aria-label="Выход"
-          onClick={onClose}></button>
-        <form className="form" name={`${name}-form`}>
+          onClick={onClose}>
+        </button>
+        <form
+          className="form"
+          name={`${name}-form`}
+          onSubmit={onSubmit}
+        >
           {children}
           <button className="form__submit-btn" type="submit">{buttonText}</button>
         </form>

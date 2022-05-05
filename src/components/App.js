@@ -6,6 +6,7 @@ import Main from "./Main";
 import Footer from "./Footer";
 import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "./ImagePopup";
+import EditProfilePopup from "./EditProfilePopup";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
@@ -60,6 +61,17 @@ function App() {
     setIsEditProfilePopupOpen(true);
   }
 
+  function handleUpdateUser({ name, about }) {
+      api.setUserInfo({ name, about })
+      .then((data) => {
+        setCurrentUser(data)
+        closeAllPopups()
+      })
+      .catch((err) => {
+        console.log(`Ошибка! ${err}`);
+      })
+  }
+
   function handleAddPlaceClick() {
     setIsAddPlacePopupOpen(true);
   }
@@ -90,12 +102,19 @@ function App() {
 
         <Footer />
 
+        <EditProfilePopup
+          isOpen={isEditProfilePopupOpen}
+          onClose={closeAllPopups}
+          onUpdateUser={handleUpdateUser}
+        ></EditProfilePopup>
+
         <PopupWithForm
           title={"Обновить аватар"}
           name={"newAvatar-popup"}
           buttonText={"Сохранить"}
           isOpen={isEditAvatarPopupOpen}
           onClose={closeAllPopups}
+          // onSubmit={'НАДО ВСТАВИТЬ'}
         >
           <div className="form__wrap">
             <input
@@ -111,50 +130,12 @@ function App() {
         </PopupWithForm>
 
         <PopupWithForm
-          title={"Редактировать профиль"}
-          name={"profile-popup"}
-          buttonText={"Сохранить"}
-          isOpen={isEditProfilePopupOpen}
-          onClose={closeAllPopups}
-        >
-          <>
-            <div className="form__wrap">
-              <input
-                className="form__input"
-                id="name-input"
-                type="text"
-                name="inputName"
-                defaultValue="1"
-                placeholder="Ваше имя"
-                minLength="2"
-                maxLength="40"
-                required
-              />
-              <span className="form__input-error name-input-error"></span>
-            </div>
-            <div className="form__wrap">
-              <input
-                className="form__input"
-                id="occupation-input"
-                type="text"
-                name="inputOccupation"
-                defaultValue="2"
-                placeholder="Род занятий"
-                minLength="2"
-                maxLength="200"
-                required
-              />
-              <span className="form__input-error occupation-input-error"></span>
-            </div>
-          </>
-        </PopupWithForm>
-
-        <PopupWithForm
           title={"Новое место"}
           name={"elements-popup"}
           buttonText={"Сохранить"}
           isOpen={isAddPlacePopupOpen}
           onClose={closeAllPopups}
+          // onSubmit={'НАДО ВСТАВИТЬ'}
         >
           <>
             <div className="form__wrap">
@@ -190,6 +171,7 @@ function App() {
           buttonText={"Да"}
           isOpen={isConfirmAvatarPopupOpen}
           onClose={closeAllPopups}
+          // onSubmit={'НАДО ВСТАВИТЬ'}
         >
           <h2 className="popup__title popup__title_content_confirm">
             Вы уверены?

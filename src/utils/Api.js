@@ -1,4 +1,4 @@
-import {apiInfo} from './utils';
+import { apiInfo } from "./utils";
 
 class Api {
   constructor(apiInfo) {
@@ -10,65 +10,61 @@ class Api {
     if (res.ok) {
       return res.json();
     }
-    return Promise.reject(`Ошибка: ${res.status}`)
-    .then(dataObject => dataObject)
+    return Promise.reject(`Ошибка: ${res.status}`).then(
+      (dataObject) => dataObject
+    );
   }
 
   getInitialCards() {
     return fetch(`${this._baseUrl}/cards`, {
       headers: this._headers,
-    })
-    .then(res => this._handleServerResponse(res))
+    }).then((res) => this._handleServerResponse(res));
   }
 
   getUserInfo() {
     return fetch(`${this._baseUrl}/users/me`, {
-      method: 'GET',
-      headers: this._headers
-    })
-    .then(res => this._handleServerResponse(res))
+      method: "GET",
+      headers: this._headers,
+    }).then((res) => this._handleServerResponse(res));
   }
 
   changeAvatar(avatarUrl) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        avatar: avatarUrl
-      })
-    })
-    .then(res => this._handleServerResponse(res))
+        avatar: avatarUrl,
+      }),
+    }).then((res) => this._handleServerResponse(res));
   }
 
-  patchUserInfo(data) {
-    return fetch(`${this._baseUrl}/users/me`, {
-      method: 'PATCH',
-      headers: this._headers,
-      body: JSON.stringify({
-        name: data.inputName,
-        about: data.inputOccupation
-      })
-    })
-  }
+  // patchUserInfo(data) {
+  //   return fetch(`${this._baseUrl}/users/me`, {
+  //     method: "PATCH",
+  //     headers: this._headers,
+  //     body: JSON.stringify({
+  //       name: data.inputName,
+  //       about: data.inputOccupation,
+  //     }),
+  //   });
+  // }
 
   postCard(data) {
     return fetch(`${this._baseUrl}/cards`, {
-      method: 'POST',
+      method: "POST",
       headers: this._headers,
       body: JSON.stringify({
         name: data.inputElementTitle,
-        link: data.inputElementLink
-      })
-    })
-    .then(res => this._handleServerResponse(res))
+        link: data.inputElementLink,
+      }),
+    }).then((res) => this._handleServerResponse(res));
   }
 
   deleteCard(cardId) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
-      method: 'DELETE',
-      headers: this._headers
-    })
-    .then(res => this._handleServerResponse(res))
+      method: "DELETE",
+      headers: this._headers,
+    }).then((res) => this._handleServerResponse(res));
   }
 
   // putLike(cardId) {
@@ -87,12 +83,19 @@ class Api {
   //   .then(res => this._handleServerResponse(res))
   // }
 
+  setUserInfo({ name, about }) {
+    return fetch(`${this._baseUrl}/users/me`, {
+      method: "PATCH",
+      headers: this._headers,
+      body: JSON.stringify({ name, about }),
+    }).then((res) => this._handleServerResponse(res));
+  }
+
   changeLikeCardStatus(cardId, isLiked) {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-      method: isLiked ? 'PUT' : 'DELETE',
-      headers: this._headers
-    })
-    .then(res => this._handleServerResponse(res))
+      method: isLiked ? "PUT" : "DELETE",
+      headers: this._headers,
+    }).then((res) => this._handleServerResponse(res));
   }
 }
 
