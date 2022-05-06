@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/Meniaylo/mesto-react/static/css/main.159c7d91.css",
-    "main.js": "/Meniaylo/mesto-react/static/js/main.292f3e9c.js",
-    "static/js/787.5530211c.chunk.js": "/Meniaylo/mesto-react/static/js/787.5530211c.chunk.js",
-    "static/media/Inter-Medium.woff": "/Meniaylo/mesto-react/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
-    "static/media/Inter-Black.woff": "/Meniaylo/mesto-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
-    "static/media/Inter-Regular.woff": "/Meniaylo/mesto-react/static/media/Inter-Regular.8c206db99195777c6769.woff",
-    "static/media/Inter-Medium.woff2": "/Meniaylo/mesto-react/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
-    "static/media/Inter-Black.woff2": "/Meniaylo/mesto-react/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
-    "static/media/Inter-Regular.woff2": "/Meniaylo/mesto-react/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
-    "static/media/logo.svg": "/Meniaylo/mesto-react/static/media/logo.3d8293a241b315143f02a9df076e611b.svg",
-    "index.html": "/Meniaylo/mesto-react/index.html",
-    "static/media/like.svg": "/Meniaylo/mesto-react/static/media/like.77ea1611be45fdeca1cc.svg",
-    "static/media/trash.svg": "/Meniaylo/mesto-react/static/media/trash.4af3841e0d351a5225a0.svg",
-    "static/media/like-active.svg": "/Meniaylo/mesto-react/static/media/like-active.08af6fbb37d19d4aa333.svg",
-    "static/media/changeAvatar.svg": "/Meniaylo/mesto-react/static/media/changeAvatar.a086f758840ae814ecde.svg",
-    "static/media/close-btn.svg": "/Meniaylo/mesto-react/static/media/close-btn.64fb10fde8af85d78017.svg",
-    "static/media/edit-pen.svg": "/Meniaylo/mesto-react/static/media/edit-pen.686ec1de24fcfb5046fa.svg",
-    "static/media/plus.svg": "/Meniaylo/mesto-react/static/media/plus.954d1ecf00812f229770.svg",
-    "main.159c7d91.css.map": "/Meniaylo/mesto-react/static/css/main.159c7d91.css.map",
-    "main.292f3e9c.js.map": "/Meniaylo/mesto-react/static/js/main.292f3e9c.js.map",
-    "787.5530211c.chunk.js.map": "/Meniaylo/mesto-react/static/js/787.5530211c.chunk.js.map"
+    "main.css": "/mesto-react/static/css/main.66e3990e.css",
+    "main.js": "/mesto-react/static/js/main.8a7a3159.js",
+    "static/js/787.5530211c.chunk.js": "/mesto-react/static/js/787.5530211c.chunk.js",
+    "static/media/Inter-Medium.woff": "/mesto-react/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/mesto-react/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/mesto-react/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/mesto-react/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/mesto-react/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/mesto-react/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/logo.svg": "/mesto-react/static/media/logo.3d8293a241b315143f02a9df076e611b.svg",
+    "index.html": "/mesto-react/index.html",
+    "static/media/like.svg": "/mesto-react/static/media/like.77ea1611be45fdeca1cc.svg",
+    "static/media/trash.svg": "/mesto-react/static/media/trash.4af3841e0d351a5225a0.svg",
+    "static/media/like-active.svg": "/mesto-react/static/media/like-active.08af6fbb37d19d4aa333.svg",
+    "static/media/changeAvatar.svg": "/mesto-react/static/media/changeAvatar.a086f758840ae814ecde.svg",
+    "static/media/close-btn.svg": "/mesto-react/static/media/close-btn.64fb10fde8af85d78017.svg",
+    "static/media/edit-pen.svg": "/mesto-react/static/media/edit-pen.686ec1de24fcfb5046fa.svg",
+    "static/media/plus.svg": "/mesto-react/static/media/plus.954d1ecf00812f229770.svg",
+    "main.66e3990e.css.map": "/mesto-react/static/css/main.66e3990e.css.map",
+    "main.8a7a3159.js.map": "/mesto-react/static/js/main.8a7a3159.js.map",
+    "787.5530211c.chunk.js.map": "/mesto-react/static/js/787.5530211c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.159c7d91.css",
-    "static/js/main.292f3e9c.js"
+    "static/css/main.66e3990e.css",
+    "static/js/main.8a7a3159.js"
   ]
 }
