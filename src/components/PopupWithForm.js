@@ -1,6 +1,4 @@
-function PopupWithForm({title, name, buttonText, isOpen, onClose, onSubmit, children}) {
-  
-  return (
+const PopupWithForm = ({title, name, buttonText, isOpen, onClose, onSubmit, children}) => (
     <section
       className={`popup ${isOpen && 'popup_active'}`}
       id={name}>
@@ -22,7 +20,6 @@ function PopupWithForm({title, name, buttonText, isOpen, onClose, onSubmit, chil
         </form>
       </div>
     </section>
-  )
-}
+  );
 
 export default PopupWithForm;

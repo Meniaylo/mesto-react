@@ -36,8 +36,7 @@ function Main({ cards, onCardLike, onCardDelete, onEditProfile, onAddPlace, onEd
       </section>
 
       <section className="elements" aria-label="Фотографии">
-        {cards.map((card) => {
-          return (
+        {cards.map((card) => (
             <Card
               card={card}
               onCardClick={onCardClick}
@@ -45,8 +44,7 @@ function Main({ cards, onCardLike, onCardDelete, onEditProfile, onAddPlace, onEd
               onCardLike={onCardLike}
               onCardDelete={onCardDelete}
             />
-          );
-        })}
+          ))}
       </section>
     </main>
   );

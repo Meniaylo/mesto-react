@@ -38,7 +38,10 @@ function App() {
     api.changeLikeCardStatus(card._id, !isLiked)
       .then((newCard) => {
       setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
-    });
+      })
+      .catch((err) => {
+        console.log(`Ошибка! ${err}`)
+      })
   }
 
   function handleAddPlaceSubmit(card) {
@@ -56,7 +59,10 @@ function App() {
     api.deleteCard(card._id)
       .then(() => {
         setCards((state) => state.filter((c) => c._id !== card._id));
-    });
+      })
+      .catch((err) => {
+        console.log(`Ошибка! ${err}`)
+      })
   }
 
   function handleEditAvatarClick() {
@@ -141,12 +147,12 @@ function App() {
         />
 
         <PopupWithForm
-          title={"Вы уверены?"}
-          name={"confirm-popup"}
-          buttonText={"Да"}
+          title="Вы уверены?"
+          name="confirm-popup"
+          buttonText="Да"
           isOpen={isConfirmAvatarPopupOpen}
           onClose={closeAllPopups}
-          // onSubmit={'НАДО ВСТАВИТЬ'}
+          // onSubmit='НАДО ВСТАВИТЬ'
         >
           <h2 className="popup__title popup__title_content_confirm">
             Вы уверены?

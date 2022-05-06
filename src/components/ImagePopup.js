@@ -1,12 +1,9 @@
 import React from "react";
 
-function ImagePopup({selectedCard, onClose}) {
-
-  return (
+const ImagePopup = ({selectedCard, onClose}) => (
     <section
       className={`popup popup_content_img ${selectedCard.name && 'popup_active'}`}
-      id={selectedCard.name}
-      key={selectedCard._id}>
+      id={selectedCard.name}>
       <div className="popup__img-container">
         <img
           className="popup__img"
@@ -17,10 +14,10 @@ function ImagePopup({selectedCard, onClose}) {
           className="popup__exit-btn link"
           type="button"
           aria-label="Выход"
-          onClick={onClose}></button>
+          onClick={onClose}>
+        </button>
       </div>
     </section>
-  )
-};
+  );
 
 export default ImagePopup;
