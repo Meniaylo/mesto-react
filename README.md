@@ -14,4 +14,4 @@
 2. Добавить попап "Вы уверены?", предваряющий удаление карточки.
 
 ## Запуск:
-Запустить проект вы можете командой npm start либо открыть его, кликнув по [ссылке](https://meniaylo.github.io/mesto-react/index.html)
+Командой npm start либо кликнув по [ссылке](https://meniaylo.github.io/mesto-react/index.html)
